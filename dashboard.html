@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="./images/cvr.webp"
+            alt="College Logo"
+            width="60"
+            height="60"
+            class="rounded-pill"
+          />
+          <span class="ms-3 fw-bold text-primary fs-4">
+            CVR College of Engineering
+          </span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="registration.html">Registration</a>
+            </li>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="dashboard.html">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5">
+      <h2 class="text-center fw-bold mb-5">Student Dashboard</h2>
+
+      <!-- Statistics Cards -->
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="card text-center shadow-sm">
+            <div class="card-body py-4">
+              <h5>Total Students</h5>
+              <span class="badge bg-primary fs-6">500</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center shadow-sm">
+            <div class="card-body py-4">
+              <h5>Present Students</h5>
+              <span class="badge bg-success fs-6">450</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center shadow-sm">
+            <div class="card-body py-4">
+              <h5>Absent Students</h5>
+              <span class="badge bg-danger fs-6">50</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center shadow-sm">
+            <div class="card-body py-4">
+              <h5>Placements</h5>
+              <span class="badge bg-warning text-dark fs-6">320</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+
+      <div class="mb-4">
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control"
+          placeholder="Search Student..."
+          onkeyup="searchStudent()"
+        />
+      </div>
+
+      <!-- Student Table -->
+
+      <div class="table-responsive">
+        <table
+          id="studentTable"
+          class="table table-bordered table-hover text-center"
+        >
+          <thead class="table-dark">
+            <tr>
+              <th>Roll No</th>
+              <th>Name</th>
+              <th>Branch</th>
+              <th>Attendance</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>23B81A0501</td>
+              <td>Rahul</td>
+              <td>CSE</td>
+              <td><span class="badge bg-success">92%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0502</td>
+              <td>Priya</td>
+              <td>ECE</td>
+              <td><span class="badge bg-warning text-dark">78%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0503</td>
+              <td>Arjun</td>
+              <td>EEE</td>
+              <td><span class="badge bg-danger">65%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0504</td>
+              <td>Sneha</td>
+              <td>CSE</td>
+              <td><span class="badge bg-success">95%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0505</td>
+              <td>Vikas</td>
+              <td>Mechanical</td>
+              <td><span class="badge bg-success">88%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0506</td>
+              <td>Anjali</td>
+              <td>Civil</td>
+              <td><span class="badge bg-success">91%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0507</td>
+              <td>Kiran</td>
+              <td>CSE</td>
+              <td><span class="badge bg-warning text-dark">76%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0508</td>
+              <td>Meghana</td>
+              <td>ECE</td>
+              <td><span class="badge bg-success">89%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0509</td>
+              <td>Rohit</td>
+              <td>EEE</td>
+              <td><span class="badge bg-danger">68%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0510</td>
+              <td>Pooja</td>
+              <td>CSE</td>
+              <td><span class="badge bg-success">94%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0511</td>
+              <td>Harsha</td>
+              <td>Mechanical</td>
+              <td><span class="badge bg-success">86%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0512</td>
+              <td>Divya</td>
+              <td>Civil</td>
+              <td><span class="badge bg-warning text-dark">79%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0513</td>
+              <td>Ajay</td>
+              <td>CSE</td>
+              <td><span class="badge bg-success">90%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0514</td>
+              <td>Lavanya</td>
+              <td>ECE</td>
+              <td><span class="badge bg-success">87%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0515</td>
+              <td>Naveen</td>
+              <td>EEE</td>
+              <td><span class="badge bg-danger">69%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0516</td>
+              <td>Bhavya</td>
+              <td>CSE</td>
+              <td><span class="badge bg-success">93%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0517</td>
+              <td>Teja</td>
+              <td>Mechanical</td>
+              <td><span class="badge bg-warning text-dark">74%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0518</td>
+              <td>Kavitha</td>
+              <td>Civil</td>
+              <td><span class="badge bg-success">85%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0519</td>
+              <td>Varun</td>
+              <td>CSE</td>
+              <td><span class="badge bg-success">96%</span></td>
+            </tr>
+
+            <tr>
+              <td>23B81A0520</td>
+              <td>Sreevani</td>
+              <td>ECE</td>
+              <td><span class="badge bg-success">88%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      function searchStudent() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let table = document.getElementById("studentTable");
+        let rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+          let nameCell = rows[i].getElementsByTagName("td")[1];
+
+          if (nameCell) {
+            let name = nameCell.textContent.toLowerCase();
+
+            if (name.includes(input)) {
+              rows[i].style.display = "";
+            } else {
+              rows[i].style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
