@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+
+  <body class="registration-page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="./images/cvr.webp"
+            alt="College Logo"
+            width="60"
+            height="60"
+            class="rounded-pill"
+          />
+          <span class="ms-3 fs-4 fw-bold">CVR College of Engineering</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="registration.html"
+                >Registration</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="registration-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Student Registration Form</h2>
+
+        <form class="registration-form needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Full Name</label>
+              <input
+                type="text"
+                placeholder="Enter Full Name"
+                class="form-control"
+                required
+              />
+              <div class="invalid-feedback">Full Name is required.</div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Roll Number</label>
+              <input
+                type="text"
+                placeholder="Enter Roll Number"
+                class="form-control"
+                required
+              />
+              <div class="invalid-feedback">Roll Number is required.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Email</label>
+              <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter Email"
+                  required
+                />
+                <div class="invalid-feedback">Enter a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Mobile Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Enter Mobile Number"
+                pattern="[0-9]{10}"
+                required
+              />
+              <div class="invalid-feedback">
+                Mobile Number must contain 10 digits.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label d-block">Gender</label>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" />
+              <label class="form-check-label">Male</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" />
+              <label class="form-check-label">Female</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" />
+              <label class="form-check-label">Other</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Branch</label>
+            <select class="form-select" required>
+              <option value="">Select Branch</option>
+              <option>CSE</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>Mechanical</option>
+              <option>Civil</option>
+            </select>
+
+            <div class="invalid-feedback">Please select a branch.</div>
+          </div>
+
+          <label class="form-label">Date of Birth</label>
+          <input type="date" class="form-control mb-3" required />
+          <div class="invalid-feedback">Please select your Date of Birth.</div>
+
+          <div class="mb-4">
+            <label class="form-label">Address</label>
+            <textarea class="form-control" rows="4"></textarea>
+          </div>
+
+          <input type="file" class="form-control mb-3" required />
+
+          <div class="invalid-feedback">Please upload a photo.</div>
+
+          <div class="form-check mb-4">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="terms"
+              required
+            />
+            <label class="form-check-label" for="terms">
+              I agree to the Terms and Conditions
+            </label>
+
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Register</button>
+
+          <button type="reset" class="btn btn-secondary ms-2">Reset</button>
+        </form>
+      </div>
+    </section>
+<script>
+      (() => {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false,
+          );
+        });
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

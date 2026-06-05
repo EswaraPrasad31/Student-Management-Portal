@@ -23,3 +23,65 @@
   position: relative;
   z-index: 1;
 }
+.nav-link {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.registration-page {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    -45deg,
+    #dbeafe,
+    #e0e7ff,
+    #dcfce7,
+    #fef9c3,
+    #fce7f3
+  );
+
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.registration-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  background-color: white !important;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: #0d6efd !important;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
