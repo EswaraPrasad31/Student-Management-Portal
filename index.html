@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management Portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="./images/cvr.webp"
+              alt="College Logo"
+              width="60"
+              height="60"
+              class="rounded-pill"
+            />
+            <span class="ms-3 fs-4 fw-bold">CVR College of Engineering</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Courses
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">CSE</a></li>
+                  <li><a class="dropdown-item" href="#">ECE</a></li>
+                  <li><a class="dropdown-item" href="#">EEE</a></li>
+                  <li><a class="dropdown-item" href="#">Mechanical</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+
+              <li class="nav-item ms-lg-3">
+                <button class="btn btn-primary">Login</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-section text-center text-light">
+  <div class="container py-5">
+    <h1 class="display-4 fw-bold">
+      Welcome to Student Management Portal
+    </h1>
+
+    <p class="lead mt-4">
+      Our Student Management Portal provides a seamless platform for managing
+      student records, course registrations, academic performance, and communication
+      between students and faculty.
+    </p>
+
+    <button class="btn btn-primary btn-lg mt-3">
+      Register Now
+    </button>
+  </div>
+</section>
+    <section class="container py-5">
+      <h2 class="text-center mb-5 fw-bold">Portal Features</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img
+              src="./images/student-registration.jpg"
+              class="card-img-top"
+              alt="Student Registration"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Student Registration</h5>
+              <p class="card-text">
+                Register new students efficiently and maintain accurate academic
+                and personal records.
+              </p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img
+              src="./images/attendance-management.png"
+              class="card-img-top"
+              alt="Attendance Management"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Attendance Management</h5>
+              <p class="card-text">
+                Track student attendance, monitor participation, and generate
+                attendance reports.
+              </p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img
+              src="./images/results.jpg"
+              class="card-img-top"
+              alt="Results Management"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Results Management</h5>
+              <p class="card-text">
+                Manage examination results, grades, and academic performance
+                records with ease.
+              </p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark text-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <p class="mb-0">
+          &copy; 2026 Student Management Portal. All Rights Reserved.
+        </p>
+
+        <div>
+          <a href="#" class="btn btn-outline-light btn-sm me-2">Facebook</a>
+          <a href="#" class="btn btn-outline-light btn-sm me-2">Twitter</a>
+          <a href="#" class="btn btn-outline-light btn-sm me-2">Instagram</a>
+          <a href="#" class="btn btn-outline-light btn-sm">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
