@@ -98,3 +98,75 @@
 .card-body {
   padding: 30px;
 }
+
+.profile-page {
+  min-height: 100vh;
+
+  background-image: url("./images/cvr-college.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  position: relative;
+}
+
+.profile-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.profile-card {
+  position: relative;
+  z-index: 1;
+
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #0d6efd;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.profile-name {
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.info-box {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-image {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.profile-name {
+  text-align: center;
+  color: #0d6efd;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
